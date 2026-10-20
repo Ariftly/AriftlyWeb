@@ -1,0 +1,7 @@
+case_id,as2_mdn,x12_997,x12_855,po_reference_match,independent_order_check,scenario
+PO-001,OK,A,ACCEPT,PASS,PASS,All configured acceptance evidence present
+PO-002,OK,A,MISSING,PASS,UNKNOWN,No required commercial response yet
+PO-003,OK,R,MISSING,PASS,UNKNOWN,EDI syntactic rejection
+PO-004,OK,A,REJECT,PASS,PASS,Commercial rejection despite syntax acceptance
+PO-005,OK,A,ACCEPT,PASS,FAIL,Accepted response but independent order-state mismatch
+PO-006,MISSING,A,ACCEPT,PASS,PASS,Other evidence present but required MDN missing
