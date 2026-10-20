@@ -1,0 +1,10 @@
+test_id,risk,synthetic_fixture,intended_assertion
+T01,Empty string / NULL,"NULL; zero-length text; whitespace; non-empty text",Match declared NULL semantics or approved mapping
+T02,Source DATE includes time,Two values on the same calendar date at different times,Preserve hour/minute/second where required
+T03,Ambiguous MERGE matching,"One target key; two conflicting source updates",Reject or resolve ambiguity as explicitly specified
+T04,Decimal precision / scale,Boundary and fractional values,Exact or preapproved-tolerance agreement
+T05,Aggregate masking,"Equal aggregate count/sum; different keyed values",Detailed keyed comparison finds mismatch
+T06,Intended value mapping,Declared source status to target status map,Accept only documented transformation
+T07,Session-sensitive time display,Temporal inputs with declared session settings,Consistent typed values under documented setup
+T08,Missing or duplicate identities,Deliberately repeated and missing records,Correctly classify absent added and repeated rows
+
