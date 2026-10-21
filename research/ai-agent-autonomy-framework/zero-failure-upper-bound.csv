@@ -1,0 +1,6 @@
+zero_failure_trials,approx_95pct_upper_failure_probability
+100,0.0300
+300,0.0100
+1000,0.0030
+3000,0.0010
+10000,0.0003
