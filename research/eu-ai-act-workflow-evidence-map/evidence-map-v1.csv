@@ -1,0 +1,8 @@
+stage,candidate_control,control_type,example_evidence,conditional_legal_anchor,owner
+Input,"Input provenance, relevance and authorization","Suggested implementation; selected duty where applicable","Dataset/version pointer; source and scope check","Articles 10 and 26(4)",Workflow/data owner
+AI action,"Execution identity and machine event trace","Suggested implementation","Run ID; system version; action type; timestamps","Articles 12 and 13",Provider/platform owner
+Validation,"Deterministic policy and output checks","Voluntary engineering assurance","Rule IDs; pass/fail result; tested artifact digest","Articles 9 and 15 as context",Quality/control owner
+Human oversight,"Appropriate review, override and safe interruption","Suggested implementation of applicable requirement","Reviewer role; decision; reason; timestamp","Articles 14 and 26(2)",Accountable reviewer
+Exception,"Detect, stop, escalate and track remediation","Suggested implementation of applicable monitoring duties","Severity; alert; stop action; incident link","Articles 20 and 26(5)",Incident owner
+Outcome,"Confirm actual downstream state","Voluntary engineering assurance","Receipt; postcondition proof; independently checked state","Articles 9 and 26 as context",Business process owner
+Evidence record,"Link records, access control and proportionate retention","Mixed: legal logs where applicable; other fields voluntary","Event manifest; access policy; retention schedule","Articles 12, 19 and 26(6)",Evidence/privacy owner
