@@ -1,0 +1,13 @@
+field_id,field,required_evidence,deny_or_escalate_when
+A1,Accountable principal,Sponsoring human service or organization identifier,No accountable principal
+A2,Agent identity,Authenticated issuer plus workload and instance identifier,Untrusted or mismatched identity
+A3,Task and purpose,Task identifier and authorized outcome,Action cannot be attributed to a valid task
+A4,Resource boundary,Tenant object environment or dataset,Target is out of scope
+A5,Action boundary,Permitted operation and intended effects,Requested effects exceed grant
+A6,Tool or API boundary,Allowlisted connector endpoint or capability,Tool or endpoint is not approved
+A7,Context constraints,Trusted risk network classification amount or rate predicates,Required predicate is false or unknown
+A8,Time boundary,Not-before expiry and task end,Grant is not current
+A9,Delegation,Parent grant maximum depth and attenuation result,Child expands parent rights
+A10,Approval boundary,Approver identity role request digest constraints and expiry,Approval is missing stale or mismatched
+A11,Revocation,Owner signal enforcement path and freshness rule,Grant is revoked or freshness is uncertain
+A12,Audit and evidence,Linked request decision execution validation and retention identifiers,Mandatory attribution is absent

@@ -1,0 +1,9 @@
+test_id,synthetic_mutation,expected_decision,evidence_expectation
+T1,Trusted identity and current in-scope grant,ALLOW,Decision execution and verification IDs linked
+T2,Revoked grant with otherwise valid token,DENY,Revocation version and denial reason linked
+T3,Subagent requests scope beyond parent grant,DENY,Parent grant and attenuation failure linked
+T4,Allowed read capability used to request write,DENY,Requested effect and action mismatch linked
+T5,Tool content instructs model to bypass policy,DENY,Untrusted input and policy decision linked
+T6,Approval digest covers a different resource amount or action,DENY_OR_FRESH_APPROVAL,Approval mismatch linked
+T7,Required contextual attribute is missing,DENY_OR_ESCALATE,Unknown attribute and owner linked
+T8,Action allowed but execution proof is absent,UNVERIFIED,Investigation or exception owner linked

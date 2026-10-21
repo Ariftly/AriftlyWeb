@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ariftly.io/research/ai-agent-authority-matrix/grant-schema-v1.json",
+  "title": "Ariftly Agent Authority Grant v1.0",
+  "description": "Proposed design schema. It is not a security standard or evidence of enforcement.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "grant_id",
+    "accountable_principal",
+    "agent_identity",
+    "task_id",
+    "resources",
+    "actions",
+    "tools",
+    "valid_from",
+    "valid_until",
+    "revocation_version",
+    "policy_version"
+  ],
+  "properties": {
+    "grant_id": { "type": "string", "examples": ["grant-synthetic-t17-001"] },
+    "accountable_principal": { "type": "string", "examples": ["role:modernization-owner"] },
+    "agent_identity": { "type": "string", "examples": ["spiffe://example.test/assessment-agent"] },
+    "instance_id": { "type": "string", "examples": ["synthetic-instance-42"] },
+    "task_id": { "type": "string", "examples": ["synthetic-project-t17"] },
+    "purpose": { "type": "string", "examples": ["analyze synthetic SQL and prepare a proposal"] },
+    "resources": { "type": "array", "items": { "type": "string" }, "examples": [["synthetic-project-t17/input/*"]] },
+    "actions": { "type": "array", "items": { "type": "string" }, "examples": [["read", "propose"]] },
+    "tools": { "type": "array", "items": { "type": "string" }, "examples": [["registered-parser", "report-writer"]] },
+    "context_constraints": { "type": "object", "additionalProperties": true },
+    "valid_from": { "type": "string", "format": "date-time" },
+    "valid_until": { "type": "string", "format": "date-time" },
+    "parent_grant_id": { "type": ["string", "null"] },
+    "delegation_max_depth": { "type": "integer", "minimum": 0 },
+    "approval_id": { "type": ["string", "null"] },
+    "approval_request_digest": { "type": ["string", "null"] },
+    "revocation_version": { "type": "string" },
+    "policy_version": { "type": "string" },
+    "evidence_record_id": { "type": ["string", "null"] }
+  }
+}

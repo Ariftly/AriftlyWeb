@@ -1,0 +1,3 @@
+fixture,applicable_fields,verified_fields,design_completeness_pct,interpretation
+synthetic_grant_alpha,12,9,75,Design inventory only not a security score
+synthetic_grant_beta,12,12,100,All fields specified but enforcement remains unproven
