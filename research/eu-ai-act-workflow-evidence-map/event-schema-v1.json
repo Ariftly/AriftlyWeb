@@ -1,0 +1,14 @@
+{
+  "workflow_run_id": "synthetic-run-0001",
+  "event_id": "synthetic-event-0001",
+  "event_time_utc": "2026-10-21T10:00:00Z",
+  "workflow_stage": "validation",
+  "system_version": "example-release-ref",
+  "input_provenance_ref": "restricted://synthetic-input-001",
+  "action_or_rule_ref": "example-rule-001",
+  "validation_result": "fail",
+  "oversight_decision_ref": null,
+  "exception_ref": "synthetic-case-001",
+  "verified_outcome_ref": null,
+  "retention_policy_id": "example-schedule-001"
+}
