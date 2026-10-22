@@ -1,0 +1,7 @@
+marker,state,operational_question,evidence_to_stop_clock
+T0,First credible signal,When did trustworthy evidence justify investigation?,Advisory or telemetry or validated report with provenance and UTC timestamp
+T1,Exposure known,Which services and running versions are in scope?,Build inventory joined to service owners and network exposure
+T2,Fix ready for environment,Is an approved fix available for this environment?,Package advisory and build identifier and artifact provenance and change approval
+T3,Remediation deployed,Have affected live instances been upgraded or replaced?,Deploy record and runtime fingerprint and restart or image-replacement record
+T4,Remediation verified,Is every in-scope asset fixed or specifically excepted?,Version checks and targeted tests and reconciliation with inventory
+T5,Historical activity reviewed,Was activity assessed back to the earliest credible observation?,Defined log lookback and investigation notes and decisions and known visibility gaps
