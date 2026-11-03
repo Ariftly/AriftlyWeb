@@ -1,0 +1,49 @@
+{
+  "contract_version": "ariftly-workflow-context-contract-v1.0",
+  "notice": "Synthetic design example; not a customer workflow or production run.",
+  "workflow_objective": "resolve_incident_after_verified_service_recovery",
+  "current_state": {
+    "incident_id": "INC-SYN-1042",
+    "incident_status": "investigating",
+    "service_health": "healthy",
+    "state_observed_at": "2026-11-02T19:14:00Z"
+  },
+  "accountable_owner": "role:platform-service-owner",
+  "requesting_actor": "human:synthetic-on-call-user",
+  "delegated_authority": {
+    "grant": "incident.update",
+    "resource": "INC-SYN-1042",
+    "expires_at": "2026-11-02T19:30:00Z"
+  },
+  "applicable_policy": "incident-resolution-policy@2026.10",
+  "effective_date": "2026-10-15",
+  "source_provenance": [
+    {
+      "fact": "service_health",
+      "source": "monitoring-system",
+      "record": "health/SYN-7"
+    },
+    {
+      "fact": "change_status",
+      "source": "change-system",
+      "record": "CHG-SYN-22"
+    }
+  ],
+  "preconditions": [
+    { "check": "service_recovery_verified", "result": "pass" },
+    { "check": "open_sev1_child_incidents", "result": 0 }
+  ],
+  "permitted_actions": [
+    {
+      "tool": "incident.update",
+      "resource": "INC-SYN-1042",
+      "fields": ["status", "resolution_note"]
+    }
+  ],
+  "exception_route": "role:platform-incident-lead",
+  "completion_evidence": [
+    "incident-update-receipt",
+    "post-write-state-read",
+    "service-health-check"
+  ]
+}
