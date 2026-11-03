@@ -1,0 +1,13 @@
+field,layer,required_question,default_failure_behavior
+workflow_objective,Purpose,"What bounded outcome is this run attempting to achieve?",BLOCK
+current_state,State,"What execution-relevant facts are true now?",REFRESH_OR_ESCALATE
+accountable_owner,Purpose,"Who owns the business outcome and unresolved decisions?",BLOCK
+requesting_actor,Authority,"Who or what initiated the task?",BLOCK
+delegated_authority,Authority,"What authority was delegated, by whom and for what scope?",BLOCK
+applicable_policy,Authority,"Which policy or rule set governs this action?",REFRESH_OR_BLOCK
+effective_date,State,"When are the state, policy and authority valid?",REFRESH
+source_provenance,State,"Where did each material fact come from?",ESCALATE
+preconditions,State,"What must be true immediately before the action?",BLOCK
+permitted_actions,Authority,"Which actions, resources and parameters are authorized?",BLOCK
+exception_route,Evidence_and_recovery,"Where does uncertainty, conflict or a failed control go?",ESCALATE
+completion_evidence,Evidence_and_recovery,"What observable evidence is required before completion?",BLOCK_COMPLETION
