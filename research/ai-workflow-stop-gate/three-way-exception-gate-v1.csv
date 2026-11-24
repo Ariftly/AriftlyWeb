@@ -1,0 +1,4 @@
+outcome,trigger,required_result,minimum_evidence
+STOP,"Required input missing; deterministic validation failed; or authority exceeded","No external action; preserve failure evidence","action,evidence,validation,authority,owner"
+ESCALATE,"Evidence available but ambiguity, policy, or consequence requires accountable judgment","Route a focused decision packet to the named owner","action,evidence,validation,authority,owner"
+PROCEED,"Required evidence present; checks passed; action inside approved authority","Execute the bounded step and record the outcome","action,evidence,validation,authority,owner"
